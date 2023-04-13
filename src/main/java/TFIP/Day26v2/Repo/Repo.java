@@ -65,9 +65,9 @@ public class Repo {
         return result;
     }
 
-    public Game getGaemById(Integer game_id) {
+    public Game getGameById(String game_id) {
         Query query = new Query();
-        Criteria criteria =  Criteria.where("gid").is(game_id);
+        Criteria criteria =  Criteria.where("_id").is(game_id);
         query.addCriteria(criteria);
 
         //find return a list

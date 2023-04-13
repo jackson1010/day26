@@ -92,7 +92,7 @@ public class Game {
 
     public JsonObjectBuilder toJsonId(){
         return Json.createObjectBuilder()
-        .add("gid", getGid())
+        .add("game_id", getGid())
         .add("name", getName())
          .add("year", getYear())
          .add("ranking", getRanking())

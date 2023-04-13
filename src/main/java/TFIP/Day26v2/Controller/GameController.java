@@ -64,11 +64,11 @@ public class GameController {
     }
 
     @GetMapping("/games/{game_id}")
-    public ResponseEntity<String> showGameById(@PathVariable Integer game_id) {
+    public ResponseEntity<String> showGameById(@PathVariable String game_id) {
        
         Game getGameById = null;
         try {
-            getGameById = repo.getGaemById(game_id);
+            getGameById = repo.getGameById(game_id);
             getGameById.setTimestamp(LocalDate.now());
         } catch (NullPointerException e) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST)
